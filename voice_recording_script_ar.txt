@@ -1,0 +1,29 @@
+Move & Play – Lolo's Adventure
+Arabic Egyptian voice-over recording script
+
+Suggested voice: warm, friendly, playful character voice; clear Egyptian Arabic;
+medium pace; gentle energy; short pauses between instruction and action.
+
+welcome: أهلاً يا بطل! أنا لولو، يلا نلعب؟
+start: مستعد للمغامرة؟ يلا بينا!
+clap: صفق مرة واحدة!
+jump: يلا نقفز!
+hands_up: ارفع إيدك لفوق!
+move_left: حرك إيدك ناحية الشمال!
+move_right: حرك إيدك ناحية اليمين!
+freeze: اثبت مكانك زي التمثال!
+dance: يلا نرقص مع بعض!
+find_blue: دور على اللون الأزرق!
+find_red: فين اللون الأحمر؟
+find_yellow: اختار اللون الأصفر!
+find_green: فين اللون الأخضر؟
+praise_1: برافو عليك! شاطر جداً!
+praise_2: واو! أنت بطل!
+try_again: مش مشكلة، نجرب تاني سوا!
+break: يلا ناخد نفس ونرتاح شوية!
+level_complete: أحسنت! خلصت المرحلة!
+game_complete: أنت بطل الغابة! أنقذت النجوم!
+
+Record each line as a separate MP3 or WAV file using the filename before its colon.
+Keep music off or very low under speech. Do not add loud cheering, startling sounds,
+or rapid sound effects. Obtain appropriate permission and do not clone a real person's voice.

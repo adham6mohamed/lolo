@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Move & Play – مغامرة لولو في الغابة السحرية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<button id="soundBtn" class="round" aria-label="الصوت">🔊</button>
+<main id="app">
+<section id="welcome" class="screen">
+ <p class="logo">Move &amp; Play</p><h1>مغامرة لولو في الغابة السحرية</h1>
+ <div class="lolo huge" data-lolo></div>
+ <button id="startBtn" class="btn big">يلا نبدأ!</button>
+</section>
+<section id="map" class="screen" hidden>
+ <h2>خريطة المغامرة</h2>
+ <div class="row"><span id="forest" class="sub"></span><button id="certBtn" class="btn small ghost">🏅 شهادتي</button></div>
+ <div id="cards" class="cards"></div>
+</section>
+<section id="play" class="screen" hidden>
+ <header class="bar"><button id="pauseBtn" class="btn small">☕ استراحة</button><b id="lvlName"></b><span id="starCount" class="chip"></span></header>
+ <p id="story" class="sub"></p>
+ <div class="stage"><div class="lolo" id="playLolo" data-lolo></div><div id="icon" class="icon"></div></div>
+ <p id="instr" class="instr" aria-live="polite"></p>
+ <div id="colors" class="colors" hidden></div>
+ <div class="row"><button id="confirm" class="btn big">✔ عملناها! (تأكيد من الكبير)</button><button id="replay" class="btn small ghost">🔁 اسمع تاني</button></div>
+ <div id="dots" class="dots"></div>
+</section>
+<section id="break" class="screen" hidden>
+ <h2>يلا نرتاح شوية</h2><div class="rest"><span class="tree">🌳</span><div class="lolo" data-lolo></div></div>
+ <p class="sub">خد نفس عميق… شهيق… زفير…</p>
+ <div class="row"><button id="contBtn" class="btn big"></button><button id="toMap" class="btn ghost">🗺 الخريطة</button></div>
+</section>
+<section id="done" class="screen" hidden>
+ <h2 id="doneT"></h2><div class="lolo" data-lolo></div><div id="bigStar" class="bigstar">⭐</div><p id="doneMsg" class="instr"></p>
+ <div class="row"><button id="nextBtn" class="btn big">المرحلة الجاية</button><button id="doneBreak" class="btn ghost">☕ استراحة</button><button id="doneMap" class="btn ghost">🗺 الخريطة</button></div>
+</section>
+<section id="celebrate" class="screen" hidden>
+ <div id="confetti" class="confetti" aria-hidden="true"></div>
+ <h2 class="big-title">🎉 مبروك يا بطل الغابة! 🎉</h2>
+ <div class="stage"><div class="lolo hop" data-lolo></div><div class="trophy">🏆</div></div>
+ <p class="instr">أنقذت النجوم الستة ورجّعت ألوان الغابة! أنا فخور بيك جداً. 💛</p>
+ <p class="stars6">⭐⭐⭐⭐⭐⭐</p>
+ <button id="getCert" class="btn big">🏅 استلم شهادتك!</button>
+</section>
+<section id="cert" class="screen" hidden>
+ <div class="certwrap"><canvas id="certCanvas" width="1404" height="992" aria-label="Certificate of Achievement"></canvas></div>
+ <div class="row certctl">
+  <label class="namebox">اسمك: <input id="childName" dir="auto" maxlength="24" placeholder="اكتب اسمك هنا" autocomplete="off"></label>
+  <button id="dlPdf" class="btn small">⬇ تحميل PDF</button><button id="dlImg" class="btn small">🖼 تحميل صورة</button><button id="printCert" class="btn small">🖨 طباعة الشهادة</button><button id="certMap" class="btn small ghost">🗺 الخريطة</button>
+ </div>
+</section>
+</main>
+<div id="modal" class="modal" hidden><div class="panel" role="dialog" aria-label="الإعدادات">
+ <h3>الصوت</h3>
+ <label>الموسيقى <input type="range" id="musicVol" min="0" max="100"></label>
+ <label>المؤثرات <input type="range" id="sfxVol" min="0" max="100"></label>
+ <label class="chk"><input type="checkbox" id="mute"> كتم الصوت</label>
+ <label class="chk"><input type="checkbox" id="voiceOn"> صوت لولو</label>
+ <div id="gate"><p>للكبار فقط: ٣ + ٤ = ؟</p><input id="gateIn" inputmode="numeric" size="3"><button id="gateBtn" class="btn small">فتح</button></div>
+ <div id="adult" hidden><h3>إعدادات الأهل والمعلمين</h3>
+  <label class="chk"><input type="checkbox" checked disabled> اللعب بتأكيد الكبير (بدون كاميرا)</label>
+  <label>مدة الرقص (ثواني) <input type="number" id="danceSec" min="4" max="30"></label>
+  <label>مدة التجمّد (ثواني) <input type="number" id="freezeSec" min="3" max="15"></label>
+  <label>عدد الجولات <input type="number" id="rounds" min="1" max="6"></label>
+  <label>المراحل المفتوحة <input type="number" id="unlockSel" min="1" max="6"></label>
+  <p id="doneList"></p><button id="resetBtn" class="btn small danger">مسح التقدم</button></div>
+ <button id="closeBtn" class="btn">تمام</button></div></div>
+<div id="printSheet"><img id="printImg" alt="Certificate"></div>
+<script src="js/config.js"></script><script src="js/progress.js"></script><script src="js/audio.js"></script><script src="js/certificate.js"></script><script src="js/game.js"></script>
+</body></html>
